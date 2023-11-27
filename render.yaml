@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: microposts
+    name: microblog
     buildCommand: "./build.sh"
     env: python
-    startCommand: "gunicorn microposts:application"
+    startCommand: "gunicorn microblog.wsgi:application"
