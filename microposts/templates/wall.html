@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="post-container">
+    <h2>Muro del Microblog</h2>
+    
+    {% for post in micro_posts %}
+        <div class="post">
+            <p>{{ post.content }}</p>
+            <div class="post-info">
+                <small><a href="{{ post.user.personal_url }}" target="_blank">{{ post.user.username }}</a> - {{ post.created_at }}</small>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
