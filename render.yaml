@@ -3,4 +3,4 @@ services:
     name: microposts
     buildCommand: "./build.sh"
     env: python
-    startCommand: "gunicorn microposts.wsgi:application"
+    startCommand: "gunicorn microposts:application"
